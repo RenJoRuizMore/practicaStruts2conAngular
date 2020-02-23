@@ -1,0 +1,27 @@
+
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="json-default">
+    <!-- action para las llamdas a la practica01 -->    
+      <!-- listar las categorias de los productos para le componente-->
+        <action name="lst_todas_categorias" class="ComponentesAction.Componentes" method="cargar_categorias">
+            <result type="json"></result>
+            
+        </action>
+        
+       <!-- insertar productos de los productos para le componente-->
+        <action name="insertar_productos" class="ComponentesAction.Componentes" method="insertar_productos">
+            <result type="json"></result>
+        </action>
+        <!-- insertar categorias  -->
+        <action name="insertar_categoria" class="ComponentesAction.Componentes" method="insertar_categoria">
+            <result type="json"></result>
+        </action>
+        
+          
+    </package>
+</struts>
